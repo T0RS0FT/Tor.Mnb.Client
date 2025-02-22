@@ -7,9 +7,9 @@ namespace Tor.MNB.Client.Internal.Models
     internal class CurrenciesModel
     {
         [DataMember(Name = "Currencies")]
-        public Currencies Currencies { get; set; }
+        internal Currencies Currencies { get; set; }
     }
 
     [CollectionDataContract(ItemName = "Curr", Namespace = "")]
-    public class Currencies : Collection<string> { }
+    internal class Currencies : Collection<string> { }
 }
