@@ -10,10 +10,12 @@ namespace Tor.MNB.Client
         public async Task<List<string>> GetCurrenciesAsync()
         {
             var client = new MNBArfolyamServiceSoapClient();
+
             var response = await client.GetCurrenciesAsync(new GetCurrenciesRequestBody());
+
             var result = XmlHelper.DeserializeXml<CurrenciesModel>(response.GetCurrenciesResponse1.GetCurrenciesResult);
 
-            return Mappers.Currencies.Invoke(result);
+            return Mappers.Currencies(result);
         }
     }
 }

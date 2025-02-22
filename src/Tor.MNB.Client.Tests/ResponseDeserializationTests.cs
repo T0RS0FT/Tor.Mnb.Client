@@ -14,7 +14,7 @@ namespace Tor.MNB.Client.Tests
 
             var model = XmlHelper.DeserializeXml<CurrenciesModel>(xml);
 
-            var result = Mappers.Currencies.Invoke(model);
+            var result = Mappers.Currencies(model);
 
             Assert.IsNotNull(result);
             Assert.IsTrue(result.Count > 0);
