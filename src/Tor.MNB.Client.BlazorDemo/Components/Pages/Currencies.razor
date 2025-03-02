@@ -1,0 +1,15 @@
+﻿@page "/currencies"
+@rendermode InteractiveServer
+
+<h1>Currencies</h1>
+
+<button type="button" class="btn btn-primary" @onclick="LoadData">Load</button>
+
+@if (hasData)
+{
+    <ul>
+        @foreach (var item in items){
+            <li>@item</li>
+        }
+    </ul>
+}

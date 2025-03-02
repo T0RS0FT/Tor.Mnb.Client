@@ -2,6 +2,8 @@
 {
     public interface IMnbClient
     {
+        Task<bool> HealthCheckAsync();
+
         Task<List<string>> GetCurrenciesAsync();
     }
 }

@@ -7,6 +7,12 @@ namespace Tor.MNB.Client
 {
     public class MnbClient : IMnbClient
     {
+        public async Task<bool> HealthCheckAsync()
+        {
+            // TODO
+            return (await this.GetCurrenciesAsync())?.Count > 0;
+        }
+
         public async Task<List<string>> GetCurrenciesAsync()
         {
             var client = new MNBArfolyamServiceSoapClient();

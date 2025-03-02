@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tor.MNB.Client", "Tor.MNB.C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tor.MNB.Client.Tests", "Tor.MNB.Client.Tests\Tor.MNB.Client.Tests.csproj", "{C92C1CDE-655D-4EC5-AD7F-2204B931A7BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tor.MNB.Client.BlazorDemo", "Tor.MNB.Client.BlazorDemo\Tor.MNB.Client.BlazorDemo.csproj", "{8FA11B6A-CF91-4DAE-AE5F-7D9CA8B9573F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C92C1CDE-655D-4EC5-AD7F-2204B931A7BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C92C1CDE-655D-4EC5-AD7F-2204B931A7BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C92C1CDE-655D-4EC5-AD7F-2204B931A7BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FA11B6A-CF91-4DAE-AE5F-7D9CA8B9573F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FA11B6A-CF91-4DAE-AE5F-7D9CA8B9573F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FA11B6A-CF91-4DAE-AE5F-7D9CA8B9573F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FA11B6A-CF91-4DAE-AE5F-7D9CA8B9573F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
