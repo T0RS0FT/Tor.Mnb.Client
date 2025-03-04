@@ -1,0 +1,22 @@
+﻿@page "/info"
+@rendermode InteractiveServer
+
+<h1>Currencies</h1>
+
+<button type="button" class="btn btn-primary" @onclick="LoadData">Load</button>
+
+@if (hasData)
+{
+    <ul>
+        <li>First date: @info.FirstDate</li>
+        <li>Last date: @info.LastDate</li>
+        <li>Currency codes
+            <ul>
+                @foreach (var currencyCode in info.CurrencyCodes)
+                {
+                    <li>@currencyCode</li>
+                }
+            </ul>
+        </li>
+    </ul>
+}
