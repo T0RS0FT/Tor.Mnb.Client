@@ -11,5 +11,11 @@ namespace Tor.MNB.Client
         Task<GetInfoResult> GetInfoAsync();
 
         Task<List<CurrencyUnitResult>> GetCurrencyUnitsAsync(List<string> currencyCodes);
+
+        Task GetDateIntervalAsync();
+
+        Task GetExchangeRatesAsync(DateOnly startDate, DateOnly endDate, List<string> currencyCodes);
+
+        Task GetCurrentExchangeRatesAsync();
     }
 }

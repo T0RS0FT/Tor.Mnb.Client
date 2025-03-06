@@ -1,4 +1,5 @@
 ﻿using ServiceReference;
+using Tor.MNB.Client.Extensions;
 using Tor.MNB.Client.Helper;
 using Tor.MNB.Client.Internal;
 using Tor.MNB.Client.Internal.Models;
@@ -45,6 +46,29 @@ namespace Tor.MNB.Client
             var result = XmlHelper.DeserializeXml<GetCurrencyUnitsResponseModel>(response.GetCurrencyUnitsResponse1.GetCurrencyUnitsResult);
 
             return Mappers.CurrencyUnits(result);
+        }
+
+        // TODO
+        public async Task GetDateIntervalAsync()
+        {
+            var response = await client.GetDateIntervalAsync(new GetDateIntervalRequestBody());
+        }
+
+        // TODO
+        public async Task GetExchangeRatesAsync(DateOnly startDate, DateOnly endDate, List<string> currencyCodes)
+        {
+            var response = await client.GetExchangeRatesAsync(new GetExchangeRatesRequestBody()
+            {
+                startDate = startDate.ToMnbFormat(),
+                endDate = endDate.ToMnbFormat(),
+                currencyNames = string.Join(",", currencyCodes)
+            });
+        }
+
+        // TODO
+        public async Task GetCurrentExchangeRatesAsync()
+        {
+            var response = await client.GetCurrentExchangeRatesAsync(new GetCurrentExchangeRatesRequestBody());
         }
     }
 }
