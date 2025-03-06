@@ -1,17 +1,20 @@
-﻿using System.Runtime.Serialization;
+﻿using System.Xml.Serialization;
 
 namespace Tor.MNB.Client.Internal.Models
 {
-    [DataContract(Name = "MNBExchangeRatesQueryValues", Namespace = "")]
-    internal class GetInfoResponseModel
+    /// <summary>
+    /// Internal usage only, but XmlSerializer does not support internal classes
+    /// </summary>
+    [XmlRoot(ElementName = "MNBExchangeRatesQueryValues")]
+    public class GetInfoResponseModel
     {
-        [DataMember(Name = "FirstDate", Order = 0)]
-        internal DateTime FirstDate { get; set; }
+        [XmlElement(ElementName = "FirstDate")]
+        public DateTime FirstDate { get; set; }
 
-        [DataMember(Name = "LastDate", Order = 1)]
-        internal DateTime LastDate { get; set; }
+        [XmlElement(ElementName = "LastDate")]
+        public DateTime LastDate { get; set; }
 
-        [DataMember(Name = "Currencies", Order = 2)]
-        internal CurrencyCollection Currencies { get; set; }
+        [XmlElement(ElementName = "Currencies")]
+        public CurrencyCollection Currencies { get; set; }
     }
 }

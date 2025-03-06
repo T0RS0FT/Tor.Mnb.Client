@@ -1,7 +1,6 @@
 ﻿using Tor.MNB.Client.Helper;
 using Tor.MNB.Client.Internal;
 using Tor.MNB.Client.Internal.Models;
-using Tor.MNB.Client.Models;
 
 namespace Tor.MNB.Client.Tests
 {
@@ -47,8 +46,6 @@ namespace Tor.MNB.Client.Tests
             var xml = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "Xml", "GetCurrencyUnitsResponse.xml"));
 
             var model = XmlHelper.DeserializeXml<GetCurrencyUnitsResponseModel>(xml);
-
-            var g = XmlHelper.DeserializeXml<CurrencyUnitResult>(xml);
 
             var result = Mappers.CurrencyUnits(model);
 

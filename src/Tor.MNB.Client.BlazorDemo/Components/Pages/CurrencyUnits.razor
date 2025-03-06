@@ -1,0 +1,39 @@
+﻿@page "/currencyunits"
+@rendermode InteractiveServer
+
+<h1>Currency units</h1>
+
+<div class="input-group input-group-sm mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Currency codes</span>
+    </div>
+    <input type="text"
+           class="form-control"
+           aria-label="Small"
+           aria-describedby="inputGroup-sizing-sm"
+           @bind="currencyCodes"
+           placeholder="e.g., EUR,GBP,USD">
+</div>
+
+<button type="button" class="btn btn-primary" @onclick="LoadData">Load</button>
+
+@if (hasData)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Currency code</th>
+                <th>Unit</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in items)
+            {
+                <tr>
+                    <td>@item.CurrencyCode</td>
+                    <td>@item.Unit</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

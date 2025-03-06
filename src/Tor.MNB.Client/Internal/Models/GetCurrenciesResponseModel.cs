@@ -1,11 +1,14 @@
-﻿using System.Runtime.Serialization;
+﻿using System.Xml.Serialization;
 
 namespace Tor.MNB.Client.Internal.Models
 {
-    [DataContract(Name = "MNBCurrencies", Namespace = "")]
-    internal class GetCurrenciesResponseModel
+    /// <summary>
+    /// Internal usage only, but XmlSerializer does not support internal classes
+    /// </summary>
+    [XmlRoot(ElementName = "MNBCurrencies")]
+    public class GetCurrenciesResponseModel
     {
-        [DataMember(Name = "Currencies", Order = 0)]
-        internal CurrencyCollection Currencies { get; set; }
+        [XmlElement(ElementName = "Currencies")]
+        public CurrencyCollection Currencies { get; set; }
     }
 }

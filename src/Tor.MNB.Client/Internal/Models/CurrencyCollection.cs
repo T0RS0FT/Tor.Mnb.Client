@@ -1,8 +1,14 @@
-﻿using System.Collections.ObjectModel;
-using System.Runtime.Serialization;
+﻿using System.Xml.Serialization;
 
 namespace Tor.MNB.Client.Internal.Models
 {
-    [CollectionDataContract(ItemName = "Curr", Namespace = "")]
-    internal class CurrencyCollection : Collection<string> { }
+    /// <summary>
+    /// Internal usage only, but XmlSerializer does not support internal classes
+    /// </summary>
+    [XmlRoot(ElementName = "Currencies")]
+    public class CurrencyCollection
+    {
+        [XmlElement(ElementName = "Curr")]
+        public List<string> CurrencyCodes { get; set; }
+    }
 }

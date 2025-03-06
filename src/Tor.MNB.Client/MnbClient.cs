@@ -37,7 +37,10 @@ namespace Tor.MNB.Client
                 return [];
             }
 
-            var response = await client.GetCurrencyUnitsAsync(new GetCurrencyUnitsRequestBody() { currencyNames = string.Join(",", currencyCodes) });
+            var response = await client.GetCurrencyUnitsAsync(new GetCurrencyUnitsRequestBody()
+            {
+                currencyNames = string.Join(",", currencyCodes)
+            });
 
             var result = XmlHelper.DeserializeXml<GetCurrencyUnitsResponseModel>(response.GetCurrencyUnitsResponse1.GetCurrencyUnitsResult);
 

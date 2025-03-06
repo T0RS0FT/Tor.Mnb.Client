@@ -1,36 +1,37 @@
-﻿using System.Collections.ObjectModel;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.Xml.Serialization;
+﻿using System.Xml.Serialization;
 
 namespace Tor.MNB.Client.Internal.Models
 {
-    [DataContract(Name = "MNBCurrencyUnits", Namespace = "")]
-    internal class GetCurrencyUnitsResponseModel
+    /// <summary>
+    /// Internal usage only, but XmlSerializer does not support internal classes
+    /// </summary>
+    [XmlRoot(ElementName = "MNBCurrencyUnits")]
+    public class GetCurrencyUnitsResponseModel
     {
-        //[DataMember(Name = "Units", Order = 0)]
-        //internal CurrencyUnitCollection Currencies { get; set; }
-
-        [DataMember(Name = "Units", Order = 0)]
-        internal Collection<A> Items { get; set; }
+        [XmlElement(ElementName = "Units")]
+        public CurrencyUnits UnitsCollection { get; set; }
     }
 
-    [CollectionDataContract(ItemName = "Unit", Namespace = "")]
-    [XmlSerializerFormat]
-    internal class CurrencyUnitCollection : Collection<decimal>
+    /// <summary>
+    /// Internal usage only, but XmlSerializer does not support internal classes
+    /// </summary>
+    [XmlRoot(ElementName = "Units")]
+    public class CurrencyUnits
     {
-        [XmlAttribute()]
-        internal string CurrencyCode { get; set; }
+        [XmlElement(ElementName = "Unit")]
+        public List<CurrencyUnit> Items { get; set; }
     }
 
-    [CollectionDataContract(ItemName = "Unit")]
-    [XmlSerializerFormat]
-    internal class A
+    /// <summary>
+    /// Internal usage only, but XmlSerializer does not support internal classes
+    /// </summary>
+    [XmlRoot(ElementName = "Unit")]
+    public class CurrencyUnit
     {
-        [DataMember, XmlAttribute]
-        internal string curr { get; set; }
+        [XmlAttribute(AttributeName = "curr")]
+        public string CurrencyCode { get; set; }
 
-        [DataMember, XmlText]
-        internal string Value { get; set; }
+        [XmlText]
+        public decimal Unit { get; set; }
     }
 }
