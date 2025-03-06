@@ -9,5 +9,7 @@ namespace Tor.MNB.Client
         Task<List<string>> GetCurrenciesAsync();
 
         Task<GetInfoResult> GetInfoAsync();
+
+        Task<List<CurrencyUnitResult>> GetCurrencyUnitsAsync(List<string> currencyCodes);
     }
 }

@@ -29,5 +29,19 @@ namespace Tor.MNB.Client
 
             return Mappers.Info(result);
         }
+
+        public async Task<List<CurrencyUnitResult>> GetCurrencyUnitsAsync(List<string> currencyCodes)
+        {
+            if (currencyCodes == null || currencyCodes.Count == 0)
+            {
+                return [];
+            }
+
+            var response = await client.GetCurrencyUnitsAsync(new GetCurrencyUnitsRequestBody() { currencyNames = string.Join(",", currencyCodes) });
+
+            var result = XmlHelper.DeserializeXml<GetCurrencyUnitsResponseModel>(response.GetCurrencyUnitsResponse1.GetCurrencyUnitsResult);
+
+            return Mappers.CurrencyUnits(result);
+        }
     }
 }

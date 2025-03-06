@@ -8,11 +8,15 @@
 
   <ItemGroup>
     <None Remove="Xml\GetCurrenciesResponse.xml" />
+    <None Remove="Xml\GetCurrencyUnitsResponse.xml" />
     <None Remove="Xml\GetInfoResponse.xml" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Xml\GetCurrenciesResponse.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Xml\GetCurrencyUnitsResponse.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Xml\GetInfoResponse.xml">

@@ -1,6 +1,7 @@
 ﻿using Tor.MNB.Client.Helper;
 using Tor.MNB.Client.Internal;
 using Tor.MNB.Client.Internal.Models;
+using Tor.MNB.Client.Models;
 
 namespace Tor.MNB.Client.Tests
 {
@@ -38,6 +39,24 @@ namespace Tor.MNB.Client.Tests
             Assert.IsTrue(result.CurrencyCodes.Count > 0);
             Assert.IsTrue(result.CurrencyCodes.All(x => !string.IsNullOrWhiteSpace(x)));
             Assert.IsTrue(result.CurrencyCodes.GroupBy(x => x).All(x => x.Count() == 1));
+        }
+
+        [TestMethod]
+        public void GetCurrencyUnitsDeserializeTest()
+        {
+            var xml = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "Xml", "GetCurrencyUnitsResponse.xml"));
+
+            var model = XmlHelper.DeserializeXml<GetCurrencyUnitsResponseModel>(xml);
+
+            var g = XmlHelper.DeserializeXml<CurrencyUnitResult>(xml);
+
+            var result = Mappers.CurrencyUnits(model);
+
+            Assert.IsNotNull(result);
+            Assert.IsTrue(result.Count > 0);
+            Assert.IsTrue(result.All(x => !string.IsNullOrWhiteSpace(x.CurrencyCode)));
+            Assert.IsTrue(result.GroupBy(x => x.CurrencyCode).All(x => x.Count() == 1));
+            Assert.IsTrue(result.All(x => x.Unit != 0));
         }
     }
 }

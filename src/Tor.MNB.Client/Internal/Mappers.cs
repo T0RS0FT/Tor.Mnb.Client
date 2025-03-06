@@ -15,5 +15,9 @@ namespace Tor.MNB.Client.Internal
                 LastDate = DateOnly.FromDateTime(x.LastDate),
                 CurrencyCodes = x.Currencies?.ToList() ?? []
             };
+
+        // TODO
+        internal static readonly Func<GetCurrencyUnitsResponseModel, List<CurrencyUnitResult>> CurrencyUnits = x =>
+            [];
     }
 }
