@@ -59,7 +59,7 @@ Method parameters:
 
 | Parameter                 | Description                                              | Optional / Required |
 | --------------------------|----------------------------------------------------------|---------------------|
-| currencyCodes             | The reuested three letter currency codes                 | Optional            |
+| currencyCodes             | The requested three letter currency codes                | Required            |
 
 Response: a list of the following opject
 
@@ -70,12 +70,43 @@ Response: a list of the following opject
 
 #### IMnbClient.GetDateIntervalAsync method
 
-// TODO
+No method parameters.
+
+Response:
+
+| Property      | Description                 |
+| ------------- | ----------------------------|
+| StartDate     | First available date        |
+| EndDate       | Last available date         |
 
 #### IMnbClient.GetExchangeRatesAsync method
 
-// TODO
+Method parameters:
+
+| Parameter                 | Description                                              | Optional / Required |
+| --------------------------|----------------------------------------------------------|---------------------|
+| startDate                 | The start date                                           | Required            |
+| endDate                   | The end date                                             | Required            |
+| currencyCodes             | The requested three letter currency codes                | Required            |
+
+Response: a list of the following opject
+
+| Property               | Description                     |
+| ---------------------- | --------------------------------|
+| Date                   | Date of the rates               |
+| Rates -> CurrencyCode  | The three letter currency code  |
+| Rates -> Unit          | Unit                            |
+| Rates -> ExchangeRate  | Exchange rate                   |
 
 #### IMnbClient.GetCurrentExchangeRatesAsync method
 
-// TODO
+No method parameters.
+
+Response: 
+
+| Property               | Description                     |
+| ---------------------- | --------------------------------|
+| Date                   | Date of the rates               |
+| Rates -> CurrencyCode  | The three letter currency code  |
+| Rates -> Unit          | Unit                            |
+| Rates -> ExchangeRate  | Exchange rate                   |
