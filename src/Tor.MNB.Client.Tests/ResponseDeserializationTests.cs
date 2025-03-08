@@ -92,6 +92,7 @@ namespace Tor.MNB.Client.Tests
             Assert.IsTrue(result.All(x => x.Rates.All(y => y.ExchangeRate != 0)));
             Assert.IsTrue(result.All(x => x.Rates.All(y => !string.IsNullOrWhiteSpace(y.CurrencyCode))));
             Assert.IsTrue(result.All(x => x.Rates.GroupBy(y => y.CurrencyCode).All(y => y.Count() == 1)));
+            Assert.IsTrue(result.All(x => x.BaseCurrencyCode == Constants.BaseCurrencyCode));
         }
 
         [TestMethod]
@@ -110,6 +111,7 @@ namespace Tor.MNB.Client.Tests
             Assert.IsTrue(result.Rates.All(x => x.ExchangeRate != 0));
             Assert.IsTrue(result.Rates.All(x => !string.IsNullOrWhiteSpace(x.CurrencyCode)));
             Assert.IsTrue(result.Rates.GroupBy(x => x.CurrencyCode).All(y => y.Count() == 1));
+            Assert.IsTrue(result.BaseCurrencyCode == Constants.BaseCurrencyCode);
         }
     }
 }

@@ -34,6 +34,7 @@ namespace Tor.MNB.Client.Internal
         internal static readonly Func<GetExchangeRatesResponseModel, List<ExchangeRatesResult>> ExchangeRates = x =>
             x?.Day?.Select(x => new ExchangeRatesResult()
             {
+                BaseCurrencyCode = Constants.BaseCurrencyCode,
                 Date = DateOnly.FromDateTime(x.Date),
                 Rates = x?.Rates?.Select(y => new ExchangeRateResult()
                 {
@@ -46,6 +47,7 @@ namespace Tor.MNB.Client.Internal
         internal static readonly Func<GetCurrentExchangeRatesResponseModel, ExchangeRatesResult> CurrentExchangeRates = x =>
             x?.Day == null ? null : new ExchangeRatesResult()
             {
+                BaseCurrencyCode = Constants.BaseCurrencyCode,
                 Date = DateOnly.FromDateTime(x.Day.Date),
                 Rates = x.Day.Rates?.Select(y => new ExchangeRateResult()
                 {
