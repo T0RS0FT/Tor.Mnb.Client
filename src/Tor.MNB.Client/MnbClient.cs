@@ -9,7 +9,7 @@ namespace Tor.MNB.Client
 {
     public class MnbClient : IMnbClient
     {
-        public string BaseCurrencyCode { get; } = "HUF";
+        public string BaseCurrencyCode { get; } = Constants.BaseCurrencyCode;
 
         private readonly MNBArfolyamServiceSoapClient client = new();
 
@@ -42,7 +42,7 @@ namespace Tor.MNB.Client
 
             var response = await client.GetCurrencyUnitsAsync(new GetCurrencyUnitsRequestBody()
             {
-                currencyNames = string.Join(",", currencyCodes)
+                currencyNames = string.Join(",", currencyCodes).ToUpper()
             });
 
             var result = XmlHelper.DeserializeXml<GetCurrencyUnitsResponseModel>(response.GetCurrencyUnitsResponse1.GetCurrencyUnitsResult);
@@ -61,11 +61,16 @@ namespace Tor.MNB.Client
 
         public async Task<List<ExchangeRatesResult>> GetExchangeRatesAsync(DateOnly startDate, DateOnly endDate, List<string> currencyCodes)
         {
+            if (currencyCodes == null || currencyCodes.Count == 0)
+            {
+                return [];
+            }
+
             var response = await client.GetExchangeRatesAsync(new GetExchangeRatesRequestBody()
             {
                 startDate = startDate.ToMnbFormat(),
                 endDate = endDate.ToMnbFormat(),
-                currencyNames = string.Join(",", currencyCodes)
+                currencyNames = string.Join(",", currencyCodes).ToUpper()
             });
 
             var result = XmlHelper.DeserializeXml<GetExchangeRatesResponseModel>(response.GetExchangeRatesResponse1.GetExchangeRatesResult);

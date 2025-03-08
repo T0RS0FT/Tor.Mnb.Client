@@ -1,0 +1,30 @@
+﻿@page "/currentexchangerates"
+@rendermode InteractiveServer
+
+<h1>Current exchange rates</h1>
+
+<button type="button" class="btn btn-primary" @onclick="LoadData">Load</button>
+
+@if (hasData)
+{
+    <div>Date: @data.Date</div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Currency code</th>
+                <th>Unit</th>
+                <th>Exchange rate</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var rate in data.Rates)
+            {
+                <tr>
+                    <td>@rate.CurrencyCode</td>
+                    <td>@rate.Unit</td>
+                    <td>@rate.ExchangeRate</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
