@@ -1,0 +1,14 @@
+﻿@page "/dateinterval"
+@rendermode InteractiveServer
+
+<h1>Date interval</h1>
+
+<button type="button" class="btn btn-primary" @onclick="LoadData">Load</button>
+
+@if (hasData)
+{
+    <ul>
+        <li>Start date: @data.StartDate</li>
+        <li>End date: @data.EndDate</li>
+    </ul>
+}

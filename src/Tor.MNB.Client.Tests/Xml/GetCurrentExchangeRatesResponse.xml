@@ -1,0 +1,37 @@
+﻿<MNBCurrentExchangeRates>
+  <Day date="2025-03-07">
+    <Rate unit="1" curr="AUD">231,87000</Rate>
+    <Rate unit="1" curr="BGN">203,94000</Rate>
+    <Rate unit="1" curr="BRL">63,72000</Rate>
+    <Rate unit="1" curr="CAD">256,80000</Rate>
+    <Rate unit="1" curr="CHF">417,97000</Rate>
+    <Rate unit="1" curr="CNY">50,80000</Rate>
+    <Rate unit="1" curr="CZK">15,93000</Rate>
+    <Rate unit="1" curr="DKK">53,47000</Rate>
+    <Rate unit="1" curr="EUR">398,88000</Rate>
+    <Rate unit="1" curr="GBP">475,16000</Rate>
+    <Rate unit="1" curr="HKD">47,25000</Rate>
+    <Rate unit="100" curr="IDR">2,25000</Rate>
+    <Rate unit="1" curr="ILS">101,63000</Rate>
+    <Rate unit="1" curr="INR">4,23000</Rate>
+    <Rate unit="1" curr="ISK">2,71000</Rate>
+    <Rate unit="100" curr="JPY">249,05000</Rate>
+    <Rate unit="100" curr="KRW">25,44000</Rate>
+    <Rate unit="1" curr="MXN">18,15000</Rate>
+    <Rate unit="1" curr="MYR">83,18000</Rate>
+    <Rate unit="1" curr="NOK">33,90000</Rate>
+    <Rate unit="1" curr="NZD">210,31000</Rate>
+    <Rate unit="1" curr="PHP">6,42000</Rate>
+    <Rate unit="1" curr="PLN">95,51000</Rate>
+    <Rate unit="1" curr="RON">80,16000</Rate>
+    <Rate unit="1" curr="RSD">3,41000</Rate>
+    <Rate unit="1" curr="RUB">4,13000</Rate>
+    <Rate unit="1" curr="SEK">36,39000</Rate>
+    <Rate unit="1" curr="SGD">276,32000</Rate>
+    <Rate unit="1" curr="THB">10,91000</Rate>
+    <Rate unit="1" curr="TRY">10,07000</Rate>
+    <Rate unit="1" curr="UAH">8,91000</Rate>
+    <Rate unit="1" curr="USD">367,23000</Rate>
+    <Rate unit="1" curr="ZAR">20,33000</Rate>
+  </Day>
+</MNBCurrentExchangeRates>

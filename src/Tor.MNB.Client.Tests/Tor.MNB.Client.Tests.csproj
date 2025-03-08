@@ -9,6 +9,9 @@
   <ItemGroup>
     <None Remove="Xml\GetCurrenciesResponse.xml" />
     <None Remove="Xml\GetCurrencyUnitsResponse.xml" />
+    <None Remove="Xml\GetCurrentExchangeRatesResponse.xml" />
+    <None Remove="Xml\GetDateIntervalResponse.xml" />
+    <None Remove="Xml\GetExchangeRatesResponse.xml" />
     <None Remove="Xml\GetInfoResponse.xml" />
   </ItemGroup>
 
@@ -17,6 +20,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Xml\GetCurrencyUnitsResponse.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Xml\GetCurrentExchangeRatesResponse.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Xml\GetDateIntervalResponse.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Xml\GetExchangeRatesResponse.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Xml\GetInfoResponse.xml">

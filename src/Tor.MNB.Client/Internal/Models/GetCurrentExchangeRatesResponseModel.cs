@@ -5,10 +5,10 @@ namespace Tor.MNB.Client.Internal.Models
     /// <summary>
     /// Internal usage only, but XmlSerializer does not support internal classes
     /// </summary>
-    [XmlRoot(ElementName = "Currencies")]
-    public class CurrencyCollection
+    [XmlRoot(ElementName = "MNBCurrentExchangeRates")]
+    public class GetCurrentExchangeRatesResponseModel
     {
-        [XmlElement(ElementName = "Curr")]
-        public List<string> CurrencyCodes { get; set; }
+        [XmlElement(ElementName = "Day")]
+        public ExchangeRatesDayModel Day { get; set; }
     }
 }

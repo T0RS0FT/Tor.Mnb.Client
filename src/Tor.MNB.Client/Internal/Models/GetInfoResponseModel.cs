@@ -15,6 +15,6 @@ namespace Tor.MNB.Client.Internal.Models
         public DateTime LastDate { get; set; }
 
         [XmlElement(ElementName = "Currencies")]
-        public CurrencyCollection Currencies { get; set; }
+        public CurrencyCollectionModel Currencies { get; set; }
     }
 }

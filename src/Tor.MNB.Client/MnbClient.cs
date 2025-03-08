@@ -9,6 +9,8 @@ namespace Tor.MNB.Client
 {
     public class MnbClient : IMnbClient
     {
+        public string BaseCurrencyCode { get; } = "HUF";
+
         private readonly MNBArfolyamServiceSoapClient client = new();
 
         public async Task<bool> HealthCheckAsync() => (await this.GetCurrenciesAsync())?.Count > 0;
@@ -22,7 +24,7 @@ namespace Tor.MNB.Client
             return Mappers.Currencies(result);
         }
 
-        public async Task<GetInfoResult> GetInfoAsync()
+        public async Task<InfoResult> GetInfoAsync()
         {
             var response = await client.GetInfoAsync(new GetInfoRequestBody());
 
@@ -48,14 +50,16 @@ namespace Tor.MNB.Client
             return Mappers.CurrencyUnits(result);
         }
 
-        // TODO
-        public async Task GetDateIntervalAsync()
+        public async Task<DateIntervalResult> GetDateIntervalAsync()
         {
             var response = await client.GetDateIntervalAsync(new GetDateIntervalRequestBody());
+
+            var result = XmlHelper.DeserializeXml<GetDateIntervalResponseModel>(response.GetDateIntervalResponse1.GetDateIntervalResult);
+
+            return Mappers.DateInterval(result);
         }
 
-        // TODO
-        public async Task GetExchangeRatesAsync(DateOnly startDate, DateOnly endDate, List<string> currencyCodes)
+        public async Task<List<ExchangeRatesResult>> GetExchangeRatesAsync(DateOnly startDate, DateOnly endDate, List<string> currencyCodes)
         {
             var response = await client.GetExchangeRatesAsync(new GetExchangeRatesRequestBody()
             {
@@ -63,12 +67,19 @@ namespace Tor.MNB.Client
                 endDate = endDate.ToMnbFormat(),
                 currencyNames = string.Join(",", currencyCodes)
             });
+
+            var result = XmlHelper.DeserializeXml<GetExchangeRatesResponseModel>(response.GetExchangeRatesResponse1.GetExchangeRatesResult);
+
+            return Mappers.ExchangeRates(result);
         }
 
-        // TODO
-        public async Task GetCurrentExchangeRatesAsync()
+        public async Task<ExchangeRatesResult> GetCurrentExchangeRatesAsync()
         {
             var response = await client.GetCurrentExchangeRatesAsync(new GetCurrentExchangeRatesRequestBody());
+
+            var result = XmlHelper.DeserializeXml<GetCurrentExchangeRatesResponseModel>(response.GetCurrentExchangeRatesResponse1.GetCurrentExchangeRatesResult);
+
+            return Mappers.CurrentExchangeRates(result);
         }
     }
 }

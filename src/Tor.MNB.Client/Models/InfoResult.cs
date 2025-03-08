@@ -1,6 +1,6 @@
 ﻿namespace Tor.MNB.Client.Models
 {
-    public class GetInfoResult
+    public class InfoResult
     {
         public DateOnly FirstDate { get; set; }
 

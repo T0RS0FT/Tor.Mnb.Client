@@ -9,29 +9,29 @@ namespace Tor.MNB.Client.Internal.Models
     public class GetCurrencyUnitsResponseModel
     {
         [XmlElement(ElementName = "Units")]
-        public CurrencyUnits UnitsCollection { get; set; }
+        public CurrencyUnitsModel UnitsCollection { get; set; }
     }
 
     /// <summary>
     /// Internal usage only, but XmlSerializer does not support internal classes
     /// </summary>
     [XmlRoot(ElementName = "Units")]
-    public class CurrencyUnits
+    public class CurrencyUnitsModel
     {
         [XmlElement(ElementName = "Unit")]
-        public List<CurrencyUnit> Items { get; set; }
+        public List<CurrencyUnitModel> Items { get; set; }
     }
 
     /// <summary>
     /// Internal usage only, but XmlSerializer does not support internal classes
     /// </summary>
     [XmlRoot(ElementName = "Unit")]
-    public class CurrencyUnit
+    public class CurrencyUnitModel
     {
         [XmlAttribute(AttributeName = "curr")]
         public string CurrencyCode { get; set; }
 
         [XmlText]
-        public decimal Unit { get; set; }
+        public string Unit { get; set; }
     }
 }

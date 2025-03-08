@@ -1,0 +1,42 @@
+﻿<MNBExchangeRates>
+  <Day date="2025-03-07">
+    <Rate unit="1" curr="EUR">398,88000</Rate>
+    <Rate unit="1" curr="GBP">475,16000</Rate>
+    <Rate unit="1" curr="USD">367,23000</Rate>
+  </Day>
+  <Day date="2025-03-06">
+    <Rate unit="1" curr="EUR">400,24000</Rate>
+    <Rate unit="1" curr="GBP">477,17000</Rate>
+    <Rate unit="1" curr="USD">370,59000</Rate>
+  </Day>
+  <Day date="2025-03-05">
+    <Rate unit="1" curr="EUR">397,99000</Rate>
+    <Rate unit="1" curr="GBP">476,91000</Rate>
+    <Rate unit="1" curr="USD">371,54000</Rate>
+  </Day>
+  <Day date="2025-03-04">
+    <Rate unit="1" curr="EUR">398,22000</Rate>
+    <Rate unit="1" curr="GBP">482,10000</Rate>
+    <Rate unit="1" curr="USD">378,86000</Rate>
+  </Day>
+  <Day date="2025-03-03">
+    <Rate unit="1" curr="EUR">401,90000</Rate>
+    <Rate unit="1" curr="GBP">486,72000</Rate>
+    <Rate unit="1" curr="USD">385,40000</Rate>
+  </Day>
+  <Day date="2025-02-28">
+    <Rate unit="1" curr="EUR">400,51000</Rate>
+    <Rate unit="1" curr="GBP">485,26000</Rate>
+    <Rate unit="1" curr="USD">385,25000</Rate>
+  </Day>
+  <Day date="2025-02-27">
+    <Rate unit="1" curr="EUR">399,63000</Rate>
+    <Rate unit="1" curr="GBP">483,25000</Rate>
+    <Rate unit="1" curr="USD">381,14000</Rate>
+  </Day>
+  <Day date="2025-02-26">
+    <Rate unit="1" curr="EUR">399,79000</Rate>
+    <Rate unit="1" curr="GBP">481,94000</Rate>
+    <Rate unit="1" curr="USD">380,86000</Rate>
+  </Day>
+</MNBExchangeRates>

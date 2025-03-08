@@ -3,18 +3,18 @@ using Tor.MNB.Client.Models;
 
 namespace Tor.MNB.Client.BlazorDemo.Components.Pages
 {
-    public partial class Info
+    public partial class DateInterval
     {
         [Inject]
         private IMnbClient MnbClient { get; set; }
 
-        private InfoResult info;
+        private DateIntervalResult data;
         private bool hasData = false;
 
         private async Task LoadData()
         {
-            this.info = await MnbClient.GetInfoAsync();
-            this.hasData = this.info?.CurrencyCodes?.Count > 0;
+            this.data = await MnbClient.GetDateIntervalAsync();
+            this.hasData = this.data != null;
         }
     }
 }
