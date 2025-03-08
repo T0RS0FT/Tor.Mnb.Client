@@ -1,4 +1,4 @@
-# Tor.MNB.Client
+# Tor.Mnb.Client
 
 [![](https://img.shields.io/nuget/dt/Tor.Mnb.Client)](#) [![](https://img.shields.io/nuget/v/Tor.Mnb.Client)](https://www.nuget.org/packages/Tor.Mnb.Client)
 
