@@ -94,6 +94,7 @@ Response: a list of the following opject
 | Property               | Description                     |
 | ---------------------- | --------------------------------|
 | Date                   | Date of the rates               |
+| BaseCurrencyCode       | Base currency code              |
 | Rates -> CurrencyCode  | The three letter currency code  |
 | Rates -> Unit          | Unit                            |
 | Rates -> ExchangeRate  | Exchange rate                   |
@@ -107,6 +108,7 @@ Response:
 | Property               | Description                     |
 | ---------------------- | --------------------------------|
 | Date                   | Date of the rates               |
+| BaseCurrencyCode       | Base currency code              |
 | Rates -> CurrencyCode  | The three letter currency code  |
 | Rates -> Unit          | Unit                            |
 | Rates -> ExchangeRate  | Exchange rate                   |
