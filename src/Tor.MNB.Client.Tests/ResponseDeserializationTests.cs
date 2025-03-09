@@ -1,8 +1,8 @@
-﻿using Tor.MNB.Client.Helper;
-using Tor.MNB.Client.Internal;
-using Tor.MNB.Client.Internal.Models;
+﻿using Tor.Mnb.Client.Helper;
+using Tor.Mnb.Client.Internal;
+using Tor.Mnb.Client.Internal.Models;
 
-namespace Tor.MNB.Client.Tests
+namespace Tor.Mnb.Client.Tests
 {
     [TestClass]
     public class ResponseDeserializationTests

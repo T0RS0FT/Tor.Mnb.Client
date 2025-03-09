@@ -1,7 +1,7 @@
-using Tor.MNB.Client.BlazorDemo.Components;
-using Tor.MNB.Client.DependencyInjection;
+using Tor.Mnb.Client.BlazorDemo.Components;
+using Tor.Mnb.Client.DependencyInjection;
 
-namespace Tor.MNB.Client.BlazorDemo
+namespace Tor.Mnb.Client.BlazorDemo
 {
     public class Program
     {

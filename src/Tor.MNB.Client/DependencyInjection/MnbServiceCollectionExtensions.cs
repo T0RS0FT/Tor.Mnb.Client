@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace Tor.MNB.Client.DependencyInjection
+namespace Tor.Mnb.Client.DependencyInjection
 {
     public static class MnbServiceCollectionExtensions
     {

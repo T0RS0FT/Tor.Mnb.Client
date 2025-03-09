@@ -1,11 +1,11 @@
 ﻿using ServiceReference;
-using Tor.MNB.Client.Extensions;
-using Tor.MNB.Client.Helper;
-using Tor.MNB.Client.Internal;
-using Tor.MNB.Client.Internal.Models;
-using Tor.MNB.Client.Models;
+using Tor.Mnb.Client.Extensions;
+using Tor.Mnb.Client.Helper;
+using Tor.Mnb.Client.Internal;
+using Tor.Mnb.Client.Internal.Models;
+using Tor.Mnb.Client.Models;
 
-namespace Tor.MNB.Client
+namespace Tor.Mnb.Client
 {
     public class MnbClient : IMnbClient
     {

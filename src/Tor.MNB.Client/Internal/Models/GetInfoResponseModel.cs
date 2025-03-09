@@ -1,6 +1,6 @@
 ﻿using System.Xml.Serialization;
 
-namespace Tor.MNB.Client.Internal.Models
+namespace Tor.Mnb.Client.Internal.Models
 {
     /// <summary>
     /// Internal usage only, but XmlSerializer does not support internal classes

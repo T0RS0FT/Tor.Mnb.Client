@@ -1,6 +1,6 @@
-﻿using Tor.MNB.Client.Models;
+﻿using Tor.Mnb.Client.Models;
 
-namespace Tor.MNB.Client
+namespace Tor.Mnb.Client
 {
     public interface IMnbClient
     {

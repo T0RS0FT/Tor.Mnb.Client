@@ -1,6 +1,6 @@
 ﻿using System.Xml.Serialization;
 
-namespace Tor.MNB.Client.Helper
+namespace Tor.Mnb.Client.Helper
 {
     public static class XmlHelper
     {

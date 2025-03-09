@@ -1,4 +1,4 @@
-﻿namespace Tor.MNB.Client.Internal
+﻿namespace Tor.Mnb.Client.Internal
 {
     internal static class Constants
     {

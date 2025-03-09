@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 
-namespace Tor.MNB.Client.BlazorDemo.Components.Pages
+namespace Tor.Mnb.Client.BlazorDemo.Components.Pages
 {
     public partial class Home
     {

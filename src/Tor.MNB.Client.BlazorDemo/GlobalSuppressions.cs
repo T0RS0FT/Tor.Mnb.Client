@@ -5,4 +5,4 @@
 
 using System.Diagnostics.CodeAnalysis;
 
-[assembly: SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "<Pending>", Scope = "member", Target = "~P:Tor.MNB.Client.BlazorDemo.Components.Pages.CurrencyUnits.currencyCodes")]
+[assembly: SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "<Pending>", Scope = "member", Target = "~P:Tor.Mnb.Client.BlazorDemo.Components.Pages.CurrencyUnits.currencyCodes")]

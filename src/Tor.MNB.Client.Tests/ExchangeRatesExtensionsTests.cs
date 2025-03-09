@@ -1,7 +1,7 @@
-﻿using Tor.MNB.Client.Extensions;
-using Tor.MNB.Client.Models;
+﻿using Tor.Mnb.Client.Extensions;
+using Tor.Mnb.Client.Models;
 
-namespace Tor.MNB.Client.Tests
+namespace Tor.Mnb.Client.Tests
 {
     [TestClass]
     public class ExchangeRatesExtensionsTests

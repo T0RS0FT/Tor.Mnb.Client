@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
-using Tor.MNB.Client.Models;
+using Tor.Mnb.Client.Models;
 
-namespace Tor.MNB.Client.BlazorDemo.Components.Pages
+namespace Tor.Mnb.Client.BlazorDemo.Components.Pages
 {
     public partial class ExchangeRates
     {

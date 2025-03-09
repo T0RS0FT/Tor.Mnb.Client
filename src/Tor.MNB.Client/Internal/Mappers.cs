@@ -1,8 +1,8 @@
-﻿using Tor.MNB.Client.Extensions;
-using Tor.MNB.Client.Internal.Models;
-using Tor.MNB.Client.Models;
+﻿using Tor.Mnb.Client.Extensions;
+using Tor.Mnb.Client.Internal.Models;
+using Tor.Mnb.Client.Models;
 
-namespace Tor.MNB.Client.Internal
+namespace Tor.Mnb.Client.Internal
 {
     internal class Mappers
     {

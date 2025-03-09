@@ -1,4 +1,4 @@
-﻿namespace Tor.MNB.Client.Models
+﻿namespace Tor.Mnb.Client.Models
 {
     public class InfoResult
     {

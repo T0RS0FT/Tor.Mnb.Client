@@ -1,7 +1,7 @@
-﻿using Tor.MNB.Client.Internal;
-using Tor.MNB.Client.Models;
+﻿using Tor.Mnb.Client.Internal;
+using Tor.Mnb.Client.Models;
 
-namespace Tor.MNB.Client.Extensions
+namespace Tor.Mnb.Client.Extensions
 {
     public static class ExchangeRatesExtensions
     {

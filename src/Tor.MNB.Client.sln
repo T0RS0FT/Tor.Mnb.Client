@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35728.132
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tor.MNB.Client", "Tor.MNB.Client\Tor.MNB.Client.csproj", "{0EA1B2A9-14BA-4D63-A297-BCB3F2AEEA86}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tor.Mnb.Client", "Tor.MNB.Client\Tor.Mnb.Client.csproj", "{0EA1B2A9-14BA-4D63-A297-BCB3F2AEEA86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tor.MNB.Client.Tests", "Tor.MNB.Client.Tests\Tor.MNB.Client.Tests.csproj", "{C92C1CDE-655D-4EC5-AD7F-2204B931A7BC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tor.Mnb.Client.Tests", "Tor.MNB.Client.Tests\Tor.Mnb.Client.Tests.csproj", "{C92C1CDE-655D-4EC5-AD7F-2204B931A7BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tor.MNB.Client.BlazorDemo", "Tor.MNB.Client.BlazorDemo\Tor.MNB.Client.BlazorDemo.csproj", "{8FA11B6A-CF91-4DAE-AE5F-7D9CA8B9573F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tor.Mnb.Client.BlazorDemo", "Tor.MNB.Client.BlazorDemo\Tor.Mnb.Client.BlazorDemo.csproj", "{8FA11B6A-CF91-4DAE-AE5F-7D9CA8B9573F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

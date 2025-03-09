@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Tor.MNB.Client\Tor.MNB.Client.csproj" />
+    <ProjectReference Include="..\Tor.Mnb.Client\Tor.Mnb.Client.csproj" />
   </ItemGroup>
 
 </Project>

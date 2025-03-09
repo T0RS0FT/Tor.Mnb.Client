@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using System.Text;
 
-namespace Tor.MNB.Client.Extensions
+namespace Tor.Mnb.Client.Extensions
 {
     internal static class StringExtensions
     {

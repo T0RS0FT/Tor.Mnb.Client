@@ -1,6 +1,6 @@
-﻿using Tor.MNB.Client.Extensions;
+﻿using Tor.Mnb.Client.Extensions;
 
-namespace Tor.MNB.Client.Tests
+namespace Tor.Mnb.Client.Tests
 {
     [TestClass]
     public class StringExtensionsTests
