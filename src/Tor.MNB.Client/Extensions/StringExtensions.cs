@@ -29,5 +29,8 @@ namespace Tor.MNB.Client.Extensions
                 ? result
                 : 0;
         }
+
+        internal static bool IgnoreCaseEquals(this string str1, string str2)
+            => str1.Equals(str2, StringComparison.InvariantCultureIgnoreCase);
     }
 }
