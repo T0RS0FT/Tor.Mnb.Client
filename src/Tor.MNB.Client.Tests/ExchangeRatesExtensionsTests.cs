@@ -42,8 +42,8 @@ namespace Tor.Mnb.Client.Tests
                 BaseCurrencyCode = "EUR",
                 Rates =
                 [
-                    new ExchangeRateResult(){ CurrencyCode="USD", ExchangeRate=(decimal)0.9615, Unit=1 },
-                    new ExchangeRateResult(){ CurrencyCode="GBP", ExchangeRate=(decimal)1.1764, Unit=1 }
+                    new ExchangeRateResult(){ CurrencyCode="USD", ExchangeRate=0.9615m, Unit=1 },
+                    new ExchangeRateResult(){ CurrencyCode="GBP", ExchangeRate=1.1764m, Unit=1 }
                 ]
             };
 
