@@ -2,7 +2,7 @@
 
 namespace Tor.Mnb.Client.DependencyInjection
 {
-    public static class MnbServiceCollectionExtensions
+    public static class ServiceCollectionExtensions
     {
         public static void AddMnb(this IServiceCollection services)
         {
